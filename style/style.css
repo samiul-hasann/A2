@@ -20,6 +20,11 @@ header {
     background-color: rgba(26, 11, 46, 1);
 }
 
+.primary-container {
+    padding: 80px 10% 120px;
+    margin: 0 auto;
+    color: white;
+}
 
 
 /* ----------------Navbar Section---------------- */
@@ -136,12 +141,6 @@ header {
     background-color: rgba(26, 11, 46, 1);
 }
 
-.about-container {
-    padding: 80px 10% 120px;
-    margin: 0 auto;
-    color: white;
-}
-
 .about-container hr {
     width: 100%;
     height: 1px;
@@ -158,6 +157,81 @@ header {
     color: rgba(255, 255, 255, 0.6);
     font-size: 18px;
     font-weight: 400;
+}
+
+
+/* ----------------Features Section---------------- */
+
+/* .features-container>* {
+    border: 1px solid red;
+} */
+
+/* .features-container {
+    display: grid;
+    grid-template-areas:
+        "headphone device"
+        "location zap-fast"
+        "resource resource";
+    grid-gap: 40px;
+    margin-top: 60px;
+} */
+
+.features-section h2 {
+        font-size: 48px;
+        font-weight: 700;
+        padding-top: 120px;
+    }
+
+.features-container {
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "headphone device device"
+        "headphone location location"
+        "zap-fast zap-fast resource";
+
+    grid-gap: 40px;
+    margin-top: 60px;
+}
+
+.headphone {
+    grid-area: headphone;
+}
+
+.device {
+    grid-area: device;
+}
+
+.location {
+    grid-area: location;
+}
+
+.zap-fast {
+    grid-area: zap-fast;
+}
+
+.resource {
+    grid-area: resource;
+}
+
+.features-section {
+    background-color: rgba(35, 14, 61, 1);
+}
+
+.features-container {
+    margin-top: 0;
+}
+
+.feature-card {
+    background-color: rgba(53, 17, 101, 0.4);
+    border-radius: 40px;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:start
 }
 
 
@@ -266,5 +340,26 @@ header {
 
     .stat-card p {
         font-size: 16px;
+    }
+
+    /* Responsive Features Section */
+    .features-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "headphone"
+            "device"
+            "location"
+            "zap-fast"
+            "resource";
+    }
+
+    .primary-container {
+        padding: 40px 5% 60px;
+    }
+
+    .features-section h2 {
+        font-size: 32px;
+        padding-top: 30px;
     }
 }
