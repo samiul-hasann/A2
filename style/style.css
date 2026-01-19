@@ -1,0 +1,270 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+}
+
+
+/* ----------Shared Style----------  */
+.btn {
+    color: white;
+    padding: 12px 16px;
+    border-radius: 100px;
+    background: linear-gradient(45deg, rgba(247, 233, 63, 1), rgba(251, 9, 180, 1), rgba(145, 0, 248, 1));
+    border: none;
+    cursor: pointer;
+}
+
+header {
+    background-color: rgba(26, 11, 46, 1);
+}
+
+
+
+/* ----------------Navbar Section---------------- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10%;
+    padding-top: 32px;
+}
+
+.logo {
+    font-size: 50px;
+    font-weight: 700;
+    color: white;
+}
+
+.nav-items {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    gap: 30px;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+}
+
+.navbar span {
+    background: linear-gradient(50deg, rgba(247, 233, 63, 1), rgba(251, 9, 180, 1), rgba(145, 0, 248, 1));
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.menubar {
+    display: none;
+}
+
+
+/* ----------------Hero Section---------------- */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    background-image: url('../assets/hero-bg.png');
+    background-size: cover;
+    background-position: center;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.exta-style {
+    padding: 0 24px;
+    font-size: 20px;
+}
+
+.btn-play {
+    background: transparent;
+    border: 1px solid #00FF88;
+    color: #00FF88;
+    padding: 12px 20px;
+    border-radius: 100px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.hero-img {
+    position: relative;
+    width: 420px;
+    height: 420px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img .circle {
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-img .mic {
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    width: 40%;
+    object-fit: contain;
+}
+
+.hero-img p {
+    position: relative;
+    color: #1A0B2E;
+    font-weight: 600;
+    background-color: #00FF88;
+    padding: 10px 30px;
+    border-radius: 100px;
+    font-size: 20px;
+    top: -120px;
+    left: 220px;
+    font-weight: 700;
+    box-shadow: 0px 4px 50px #00ff88a1;
+}
+
+
+/* About Section */
+.about-section {
+    background-color: rgba(26, 11, 46, 1);
+}
+
+.about-container {
+    padding: 80px 10% 120px;
+    margin: 0 auto;
+    color: white;
+}
+
+.about-container hr {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    margin: 40px 0;
+}
+
+.about-stats h3 {
+    color: #00FF88;
+}
+
+.about-stats p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+
+/*----------------Responsive Style---------------- */
+@media screen and (max-width: 576px) {
+
+    /* Responsive Navbar */
+    .navbar {
+        padding: 10px 0;
+        margin: 0 5%;
+    }
+
+    .nav-items,
+    .navbar button {
+        display: none;
+    }
+
+    .menubar {
+        display: inline;
+    }
+
+    .logo {
+        font-size: 25px;
+    }
+
+    /* Responsive Hero Section */
+    .hero-section {
+        background-color: rgba(26, 11, 46, 1);
+        /* border: 1px solid red; */
+        height: 440px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 15%;
+    }
+
+    .hero-img {
+        width: 170px;
+        height: 170px;
+        margin: 0 auto;
+    }
+
+    .hero-img .circle {
+        top: -1%;
+        left: -0%;
+        height: 100%;
+    }
+
+    .hero-img .mic {
+        top: 20%;
+        left: 30%;
+        width: 40%;
+    }
+
+    .hero-img p {
+        top: -60px;
+        left: 60px;
+        padding: 6px 16px;
+        font-size: 14px;
+    }
+
+    .hero-title {
+        font-size: 40px;
+        padding: 20px;
+    }
+
+    .exta-style {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+
+    .btn-play {
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+
+    /* Responsive About Section */
+    .about-title {
+        font-size: 32px;
+    }
+
+    .about-container {
+        padding: 40px 0;
+    }
+
+    .about-description {
+        padding: 0 20px;
+    }
+
+    .about-container span {
+        display: inline;
+    }
+
+    .about-description span:last-child {
+        display: block;
+        padding-top: 15px;
+    }
+
+    .about-stats {
+        margin: 40px;
+    }
+
+    /* Responsive Stat Cards */
+    .stat-card h3 {
+        font-size: 1.8em;
+    }
+
+    .stat-card p {
+        font-size: 16px;
+    }
+}
